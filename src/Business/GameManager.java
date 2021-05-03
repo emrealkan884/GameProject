@@ -8,7 +8,7 @@ public class GameManager implements GameService {
 	public void sell(Game game,Customer customer,Campaign campaign) {
 		System.out.println(game.getName() +" Adlý oyun " + customer.getFirstName()+ " " +customer.getLastName()+ " adlý oyuncuya " 
 			              + campaign.getName()+" kampanyasý ile "
-				          + game.getPrice() + "TL fiyatýyla satýldý."
+				          + (game.getPrice()-(game.getPrice()*campaign.getDiscountAmount()/100)) + "TL fiyatýyla satýldý."
 						  );
 	}
 
